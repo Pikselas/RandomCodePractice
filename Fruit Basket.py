@@ -14,6 +14,7 @@ def MaxFruitCount(Trees):
   FrameStartPos = 0
   MaxCount = 0
   LastSameTypeTreePos = 0
+  Trees.append(None)
   for i in range(len(Trees)):
     if BasketT1 == None:
       BasketT1 = Trees[i]
@@ -29,7 +30,6 @@ def MaxFruitCount(Trees):
         BasketT1 = Trees[i]
     if Trees[LastSameTypeTreePos] != Trees[i]:
       LastSameTypeTreePos = i
-    #print(MaxCount,FrameStartPos)
   return MaxCount
 
-print(MaxFruitCount([1,2,3,2,1,3,2,1]))
+print(MaxFruitCount([1,2,3,4,3,2,4,5,4,3,5,5,1]))
